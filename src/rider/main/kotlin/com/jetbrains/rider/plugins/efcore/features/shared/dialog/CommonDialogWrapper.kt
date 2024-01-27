@@ -345,6 +345,10 @@ abstract class CommonDialogWrapper<TContext : CommonDataContext>(
                 checkBox(EfCoreUiBundle.message("checkbox.enable.diagnostic.logging"))
                     .bindSelected(dataCtx.enableDiagnosticLogging)
             }
+            row {
+                checkBox(EfCoreUiBundle.message("checkbox.open.after.execution"))
+                    .bindSelected(dataCtx.enableDiagnosticLogging)
+            }
             if (efCoreVersion.major >= 5) {
                 row(EfCoreUiBundle.message("additional.arguments")) {
                     simpleExpandableTextField(dataCtx.additionalArguments)
